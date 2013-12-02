@@ -83,9 +83,40 @@ if (navigator.webkitGetUserMedia) {
       };
     }
     return {
-      "iceServers": [{
-        "url": "stun:stun.l.google.com:19302"
-      }]
+      "iceServers": [
+          {"url": "stun:23.21.150.121"},
+          {"url": "stun:stun.l.google.com:19302"},
+          {
+              'url': 'turn:8.34.221.6:3478?transport=udp',
+              'credential': 'dVo19QqLi+as4OQHtg1HAfqaf7M=',
+              'username': '41784574:1385961290'
+          },
+          {
+              'url': 'turn:8.34.221.6:3478?transport=tcp',
+              'credential': 'dVo19QqLi+as4OQHtg1HAfqaf7M=',
+              'username': '41784574:1385961290'
+          },
+          {
+              'url': 'turn:8.34.221.6:3479?transport=udp',
+              'credential': 'dVo19QqLi+as4OQHtg1HAfqaf7M=',
+              'username': '41784574:1385961290'
+          },
+          {
+              'url': 'turn:8.34.221.6:3479?transport=tcp',
+              'credential': 'dVo19QqLi+as4OQHtg1HAfqaf7M=',
+              'username': '41784574:1385961290'
+          },
+          {
+              'url': 'turn:192.158.29.39:3478?transport=udp',
+              'credential': 'JZEOEt2V3Qb0y27GRntt2u2PAYA=',
+              'username': '28224511:1379330808'
+          },
+          {
+              'url': 'turn:192.158.29.39:3478?transport=tcp',
+              'credential': 'JZEOEt2V3Qb0y27GRntt2u2PAYA=',
+              'username': '28224511:1379330808'
+          }
+      ]
     };
   };
 
