@@ -30,7 +30,26 @@ body {
     width: 60%;
 }
 
+video {
+    border: 1px solid black;
+}
+
 #videos #you {
+    position: relative;
+    width: 100%;
+    -webkit-transform: rotateY(180deg);
+
+}
+
+#videos #you.small {
+    position: absolute;
+    width: 30%;
+    right: -2;
+    bottom: 0;
+    z-index: 1;
+}
+
+#videos .remote {
     position: relative;
     width: 100%;
 }
@@ -43,11 +62,12 @@ body {
 
 #messages {
     overflow: scroll;
-    background: none repeat scroll 0 0 #F9F9F9;
+    font: 300 18px/40px 'light', 'Helvetica Neue', Arial, Helvetica, sans-serif;
     border: 1px solid #CCCCCC;
     font: 300 18px/40px 'light', 'Helvetica Neue', Arial, Helvetica, sans-serif;
     letter-spacing: 1px;
     height: 80px;
+    width: 100%;
 }
 
 #chatinput {
@@ -59,10 +79,6 @@ body {
     letter-spacing: 1px;
     padding: 5px 10px;
     width: 100%;
-}
-
-.flip {
-    -webkit-transform: rotateY(180deg);
 }
 
 .buttonBox {

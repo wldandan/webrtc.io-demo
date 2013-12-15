@@ -28,15 +28,6 @@ function subdivideVideos() {
 }
 
 function setWH(video, i) {
-  var perRow = getNumPerRow();
-  var perColumn = Math.ceil(videos.length / perRow);
-  var width = Math.floor((window.innerWidth) / perRow);
-  var height = Math.floor((window.innerHeight - 190) / perColumn);
-  video.width = width;
-  video.height = height;
-  video.style.position = "absolute";
-  video.style.left = (i % perRow) * width + "px";
-  video.style.top = Math.floor(i / perRow) * height + "px";
 }
 
 function cloneVideo(domId, socketId) {
@@ -198,9 +189,10 @@ function init() {
   rtc.on('add remote stream', function(stream, socketId) {
     console.log("ADDING REMOTE STREAM...");
     var clone = cloneVideo('you', socketId);
-    document.getElementById(clone.id).setAttribute("class", "");
+    document.getElementById(clone.id).setAttribute("class", "remote");
     rtc.attachStream(stream, clone.id);
     subdivideVideos();
+    document.getElementById('you').setAttribute("class","small");
   });
   rtc.on('disconnect stream', function(data) {
     console.log('remove ' + data);
