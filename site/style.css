@@ -22,12 +22,12 @@ body {
     position: relative;
     top: 2%;
     left: 25%;
-    width: 80%;
+    width: 50%;
 }
 
 #videos {
     position: relative;
-    width: 60%;
+    width: 100%;
 }
 
 video {
@@ -57,7 +57,7 @@ video {
 #chatbox {
     position: relative;
     bottom: 0;
-    width: 60%;
+    width: 100%;
 }
 
 #messages {
@@ -86,6 +86,7 @@ video {
     top: 2px;
     left: 2px;
     z-index: 1;
+    display: none;
 }
 
 .button {
@@ -120,4 +121,18 @@ video {
 .button:active {
     position: relative;
     top: 1px;
+}
+
+@media (max-width: 500px) {
+    #container {
+        position: relative;
+        top: 2%;
+        left: 5%;
+        width: 90%;
+    }
+    .buttonBox {
+        position: relative;
+        right: 0;
+        bottom: 0;
+    }
 }
